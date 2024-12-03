@@ -75,7 +75,72 @@ public class mainjava {
         }
         System.out.println();
     }
+   } 
+    public static void Diamond(int n){
+    //Top part:-
+   for (int i=1;i<=n;i++){
+    //spaces
+    for (int j=1;j<=n-i;j++){
+        System.out.print(" ");
+    }
+
+    //stars
+    for(int j=1;j<=2*i-1;j++){
+        System.out.print("*");
+    }
+    System.out.println();
    }
+    //bottom part:-
+   for (int i=n;i>=1;i--){
+    //spaces
+    for (int j=1;j<=n-i;j++){
+        System.out.print(" ");
+    }
+
+    //stars
+    for(int j=1;j<=2*i-1;j++){
+        System.out.print("*");
+    }
+    System.out.println();
+   }
+   }
+
+   public static void Solid_Rhombus(int n){
+    for(int i=1;i<=n;i++){
+        //spaces
+        for (int j=1;j<=n-i;j++){
+            System.out.print(" ");
+        }
+        //stars
+        for (int j=1;j<=5;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+   }
+
+   public static void Hollow_Rhombus(int n){
+    for (int i=1;i<=n;i++){
+        //spaces
+        for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+        }
+
+        //to print stars -we use hollow rectangle as logic is same
+
+        for (int j=1;j<=n;j++){
+            if(i==1||i==n||j==1||j==n){
+                System.out.print("*");
+            }else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+    }
+    }
+   
+
+
 
 
 
@@ -85,5 +150,8 @@ public class mainjava {
     Inverted_half_pyramid(5);
     floydstriangle(5);
     butterfly(5);
+    Diamond(4);
+    Solid_Rhombus(5);
+    Hollow_Rhombus(5);
    }
 }
